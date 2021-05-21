@@ -17,18 +17,18 @@
         android:layout_height="wrap_content"
         android:text="@string/Title"
         android:textSize="24sp"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_blue"
+        android:fontFamily="@font/barlow_bold"/>
 
     <!--profile picture-->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_ProfPict"
         app:layout_constraintTop_toBottomOf="@id/tv_HomeTitle"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="30dp"
         android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/profpict"/>
+        android:layout_height="70dp"/>
 
     <!--nama user-->
     <TextView
@@ -37,11 +37,13 @@
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@id/iv_ProfPict"
         android:layout_marginStart="18dp"
-        android:layout_width="wrap_content"
+        android:layout_width="212dp"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
         android:textSize="18sp"
         android:text="@string/user_name"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_blue"
+        android:fontFamily="@font/barlow_bold"/>
 
     <!--no.rek user-->
     <TextView
@@ -54,91 +56,110 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="@color/gray"
-        android:text="**** **** 0000"/>
+        android:text="**** **** 0000"
+        android:fontFamily="@font/barlow_semibold"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_UserCard"
-        app:layout_constraintTop_toBottomOf="@id/iv_ProfPict"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="350dp"
         android:layout_height="175dp"
-        android:background="@drawable/usercard"
-        app:cardCornerRadius="20dp">
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_ProfPict">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--background-->
+            <ImageView
+                android:id="@+id/cardPattern"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardpattern"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <!--title-->
             <TextView
                 android:id="@+id/tv_cardTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="24dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:text="Saldo Aktif"
+                android:textColor="@color/light_blue"
                 android:textSize="18sp"
-                android:textColor="@color/light_blue"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/barlow_semibold"/>
 
             <!--saldo-->
             <TextView
                 android:id="@+id/tv_card_SaldoAktif"
                 android:layout_width="302dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tv_cardTitle"
-                android:layout_marginTop="4dp"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
                 android:text="Rp 1.999.999"
+                android:textColor="@color/light_blue"
                 android:textSize="28sp"
-                android:textColor="@color/light_blue"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_cardTitle"
+                android:fontFamily="@font/barlow_bold"/>
 
             <!--no.rek user-->
             <TextView
                 android:id="@+id/tv_card_noRekUser"
-                app:layout_constraintTop_toBottomOf="@id/tv_card_SaldoAktif"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="0000   0000   0000"
                 android:textColor="@color/light_blue"
-                android:text="0000   0000   0000"/>
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_SaldoAktif"
+                android:fontFamily="@font/barlow_semibold"/>
 
             <!--expired-->
             <TextView
                 android:id="@+id/tv_validThruTitle"
-                app:layout_constraintTop_toBottomOf="@id/tv_card_noRekUser"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Valid Thru"
                 android:textColor="@color/light_blue"
-                android:text="Valid Thru"/>
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_noRekUser"
+                android:fontFamily="@font/barlow_semibold"/>
+
             <TextView
                 android:id="@+id/tv_validThruDate"
-                app:layout_constraintTop_toBottomOf="@id/tv_card_noRekUser"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@id/tv_validThruTitle"
-                android:layout_marginStart="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="07/26"
                 android:textColor="@color/light_blue"
-                android:text="07/26"/>
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_validThruTitle"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_noRekUser"
+                android:fontFamily="@font/barlow_semibold"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <!--info saldo button-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_InfoSaldo"
         app:layout_constraintTop_toBottomOf="@id/cv_UserCard"
         android:layout_marginTop="50dp"
@@ -146,15 +167,16 @@
         android:layout_marginStart="30dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="@color/dark_blue"/>
-    <ImageView
-        app:layout_constraintTop_toTopOf="@id/btn_InfoSaldo"
-        app:layout_constraintBottom_toBottomOf="@id/btn_InfoSaldo"
-        app:layout_constraintStart_toStartOf="@id/btn_InfoSaldo"
-        app:layout_constraintEnd_toEndOf="@id/btn_InfoSaldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/imgsaldo"/>
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/dark_blue"
+        app:iconTint="@color/pure_white"
+        app:icon="@drawable/imgsaldo"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        app:iconGravity="textTop"
+        app:iconPadding="0dp"/>
     <TextView
         android:id="@+id/tv_InfoSaldo"
         app:layout_constraintTop_toBottomOf="@id/btn_InfoSaldo"
@@ -166,7 +188,8 @@
         android:text="Informasi\nSaldo"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_blue"
+        android:fontFamily="@font/barlow_bold"/>
 
     <!--tambah saldo button-->
     <Button
@@ -177,15 +200,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="@color/dark_blue"/>
-    <ImageView
-        app:layout_constraintTop_toTopOf="@id/btn_TambahSaldo"
-        app:layout_constraintBottom_toBottomOf="@id/btn_TambahSaldo"
-        app:layout_constraintStart_toStartOf="@id/btn_TambahSaldo"
-        app:layout_constraintEnd_toEndOf="@id/btn_TambahSaldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/imgtambahsaldo"/>
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/dark_blue"
+        app:iconTint="@color/pure_white"
+        app:icon="@drawable/imgtambahsaldo"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"/>
     <TextView
         android:id="@+id/tv_TambahSaldo"
         app:layout_constraintTop_toBottomOf="@id/btn_TambahSaldo"
@@ -197,7 +221,8 @@
         android:text="Tambah\nSaldo"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_blue"
+        android:fontFamily="@font/barlow_bold"/>
 
     <!--riwayat transaksi button-->
     <Button
@@ -208,15 +233,16 @@
         android:layout_marginEnd="30dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="@color/dark_blue"/>
-    <ImageView
-        app:layout_constraintTop_toTopOf="@id/btn_RiwayatTransaksi"
-        app:layout_constraintBottom_toBottomOf="@id/btn_RiwayatTransaksi"
-        app:layout_constraintStart_toStartOf="@id/btn_RiwayatTransaksi"
-        app:layout_constraintEnd_toEndOf="@id/btn_RiwayatTransaksi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/imgtransaksi"/>
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/dark_blue"
+        app:iconTint="@color/pure_white"
+        app:icon="@drawable/imgtransaksi"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"/>
     <TextView
         android:id="@+id/tv_RiwayatTransaksi"
         app:layout_constraintTop_toBottomOf="@id/btn_RiwayatTransaksi"
@@ -228,6 +254,7 @@
         android:text="Riwayat\nTransaksi"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_blue"
+        android:fontFamily="@font/barlow_bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
