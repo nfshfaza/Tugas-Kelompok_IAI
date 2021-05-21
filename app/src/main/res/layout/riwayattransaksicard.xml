@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_RiwayatTransaksi"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="328dp"
+        android:layout_height="124dp"
+        android:background="@color/pure_white"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--transaction id-->
+            <TextView
+                android:id="@+id/tv_idTransaksi"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000000"
+                android:textSize="12sp"
+                android:textColor="@color/gray"/>
+
+            <!--transaction date-->
+            <TextView
+                android:id="@+id/tv_TanggalTransaksi"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21-05-2021"
+                android:textSize="12sp"
+                android:textColor="@color/gray"/>
+
+            <!--nama-->
+            <TextView
+                android:id="@+id/tv_transaksi_userName"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_idTransaksi"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:text="Teguh Hati Untuk Bangsa"
+                android:textSize="16sp"
+                android:textColor="@color/dark_blue"/>
+
+            <!--bank-->
+            <TextView
+                android:id="@+id/tv_Bank"
+                app:layout_constraintTop_toBottomOf="@id/tv_transaksi_userName"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:text="BNI"/>
+
+            <!--status in/out-come-->
+            <TextView
+                android:id="@+id/tv_StatusTransaksi"
+                app:layout_constraintTop_toBottomOf="@id/tv_Bank"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/green"
+                android:text="Income"/>
+
+            <!--nominal-->
+            <TextView
+                android:id="@+id/tv_NominalTransaksi"
+                app:layout_constraintTop_toBottomOf="@id/tv_Bank"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/dark_blue"
+                android:text="Rp 200.500"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

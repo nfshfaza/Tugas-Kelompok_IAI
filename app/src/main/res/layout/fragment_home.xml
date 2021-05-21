@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Title"
         android:textSize="24sp"
-        android:textColor="#10232B"/>
+        android:textColor="@color/dark_blue"/>
 
     <!--profile picture-->
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="@string/user_name"
-        android:textColor="#10232B"/>
+        android:textColor="@color/dark_blue"/>
 
     <!--no.rek user-->
     <TextView
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="#8C9E9E"
+        android:textColor="@color/gray"
         android:text="**** **** 0000"/>
 
     <androidx.cardview.widget.CardView
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:text="Saldo Aktif"
                 android:textSize="18sp"
-                android:textColor="#E8F8FF"/>
+                android:textColor="@color/light_blue"/>
 
             <!--saldo-->
             <TextView
@@ -95,7 +95,7 @@
                 android:layout_marginStart="24dp"
                 android:text="Rp 1.999.999"
                 android:textSize="28sp"
-                android:textColor="#E8F8FF"/>
+                android:textColor="@color/light_blue"/>
 
             <!--no.rek user-->
             <TextView
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:textColor="#E8F8FF"
+                android:textColor="@color/light_blue"
                 android:text="0000   0000   0000"/>
 
             <!--expired-->
@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:textColor="#E8F8FF"
+                android:textColor="@color/light_blue"
                 android:text="Valid Thru"/>
             <TextView
                 android:id="@+id/tv_validThruDate"
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:textColor="#E8F8FF"
+                android:textColor="@color/light_blue"
                 android:text="07/26"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -146,7 +146,7 @@
         android:layout_marginStart="30dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="#143848"/>
+        android:background="@color/dark_blue"/>
     <ImageView
         app:layout_constraintTop_toTopOf="@id/btn_InfoSaldo"
         app:layout_constraintBottom_toBottomOf="@id/btn_InfoSaldo"
@@ -166,7 +166,7 @@
         android:text="Informasi\nSaldo"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="#10232B"/>
+        android:textColor="@color/dark_blue"/>
 
     <!--tambah saldo button-->
     <Button
@@ -177,7 +177,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="#143848"/>
+        android:background="@color/dark_blue"/>
     <ImageView
         app:layout_constraintTop_toTopOf="@id/btn_TambahSaldo"
         app:layout_constraintBottom_toBottomOf="@id/btn_TambahSaldo"
@@ -197,7 +197,7 @@
         android:text="Tambah\nSaldo"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="#10232B"/>
+        android:textColor="@color/dark_blue"/>
 
     <!--riwayat transaksi button-->
     <Button
@@ -208,7 +208,7 @@
         android:layout_marginEnd="30dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="#143848"/>
+        android:background="@color/dark_blue"/>
     <ImageView
         app:layout_constraintTop_toTopOf="@id/btn_RiwayatTransaksi"
         app:layout_constraintBottom_toBottomOf="@id/btn_RiwayatTransaksi"
@@ -228,6 +228,6 @@
         android:text="Riwayat\nTransaksi"
         android:textSize="16sp"
         android:gravity="center_horizontal"
-        android:textColor="#10232B"/>
+        android:textColor="@color/dark_blue"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
