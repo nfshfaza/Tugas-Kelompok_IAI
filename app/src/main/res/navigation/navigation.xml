@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.moneycomefirst.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_riwayatTransaksi"
+            app:destination="@id/riwayatTransaksi" />
+        <action
+            android:id="@+id/action_home2_to_tambahSaldo"
+            app:destination="@id/tambahSaldo" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayatTransaksi"
+        android:name="com.example.moneycomefirst.RiwayatTransaksi"
+        android:label="fragment_riwayat_transaksi"
+        tools:layout="@layout/fragment_riwayat_transaksi" />
+    <fragment
+        android:id="@+id/tambahSaldo"
+        android:name="com.example.moneycomefirst.TambahSaldo"
+        android:label="fragment_tambah_saldo"
+        tools:layout="@layout/fragment_tambah_saldo" />
+</navigation>
