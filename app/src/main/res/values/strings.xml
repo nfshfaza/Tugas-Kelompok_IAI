@@ -5,4 +5,8 @@
     <string name="Title">Selamat Datang!</string>
     <string name="user_name">Nama Kamu</string>
     <string name="no_rek">0000  0000  0000</string>
+    <string name="informasi_saldo">Informasi Saldo</string>
+    <string name="profile">Profile</string>
+    <string name="tambah_saldo">Tambah Saldo</string>
+    <string name="riwayat_transaksi">Riwayat Transaksi</string>
 </resources>
