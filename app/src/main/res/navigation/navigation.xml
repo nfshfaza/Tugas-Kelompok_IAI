@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/home">
+    app:startDestination="@id/login">
 
     <fragment
         android:id="@+id/home"
         android:name="com.example.moneycomefirst.Home"
-        android:label="fragment_home"
+        android:label="Money Come First"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home2_to_riwayatTransaksi"
@@ -16,24 +16,34 @@
         <action
             android:id="@+id/action_home2_to_tambahSaldo"
             app:destination="@id/tambahSaldo" />
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_home_to_scanQr"
+            app:destination="@id/scanQr" />
     </fragment>
     <fragment
         android:id="@+id/riwayatTransaksi"
         android:name="com.example.moneycomefirst.RiwayatTransaksi"
-        android:label="fragment_riwayat_transaksi"
+        android:label="Riwayat Transaksi"
         tools:layout="@layout/fragment_riwayat_transaksi" />
     <fragment
         android:id="@+id/tambahSaldo"
         android:name="com.example.moneycomefirst.TambahSaldo"
-        android:label="fragment_tambah_saldo"
+        android:label="Cara Tambah Saldo"
         tools:layout="@layout/fragment_tambah_saldo" />
     <fragment
         android:id="@+id/login"
         android:name="com.example.moneycomefirst.Login"
-        android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_home2"
+            android:id="@+id/action_login_to_home"
             app:destination="@id/home" />
     </fragment>
+    <fragment
+        android:id="@+id/scanQr"
+        android:name="com.example.moneycomefirst.ScanQr"
+        android:label="Scan QRIS"
+        tools:layout="@layout/fragment_scan_qr" />
 </navigation>

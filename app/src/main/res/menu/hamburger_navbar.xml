@@ -19,12 +19,12 @@
             android:title="@string/tambah_saldo" />
 
         <item
-            android:id="@+id/scanQris"
+            android:id="@+id/scanQr"
             android:icon="@drawable/imgqris"
             android:title="@string/scan_qris" />
     </group>
 
     <item
-        android:id="@+id/logout"
+        android:id="@+id/login"
         android:title="@string/logout"/>
 </menu>

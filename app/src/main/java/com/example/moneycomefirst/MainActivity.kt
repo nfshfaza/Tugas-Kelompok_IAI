@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var profileCircleImageView: CircleImageView
-    private var profileImageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gemtvasia.com%2F7-things-you-didnt-know-about-mackenyu-arata&psig=AOvVaw2aNhJXJwDLwzb8KZR2q7qp&ust=1622963131554000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjEgoH3__ACFQAAAAAdAAAAABAP"
+//    private var profileImageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gemtvasia.com%2F7-things-you-didnt-know-about-mackenyu-arata&psig=AOvVaw2aNhJXJwDLwzb8KZR2q7qp&ust=1622963131554000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjEgoH3__ACFQAAAAAdAAAAABAP"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,13 +30,13 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
 
-        profileCircleImageView = navView.getHeaderView(0).findViewById(R.id.iv_navbarProfPict)
-        Glide.with(this)
-            .load(profileImageUrl)
-            .into(profileCircleImageView)
+//        profileCircleImageView = navView.getHeaderView(0).findViewById(R.id.iv_navbarProfPict)
+//        Glide.with(this)
+//            .load(profileImageUrl)
+//            .into(profileCircleImageView)
 
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.home, R.id.riwayatTransaksi, R.id.tambahSaldo), drawerLayout)
+            R.id.home, R.id.riwayatTransaksi, R.id.tambahSaldo, R.id.scanQr, R.id.login), drawerLayout)
 
         val navController = findNavController(R.id.nav_host_fragment)
 
