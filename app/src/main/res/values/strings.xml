@@ -2,19 +2,23 @@
     <string name="app_name">Money Come First</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="Title">Selamat Datang!</string>
     <string name="user_name">Nama Kamu</string>
     <string name="no_rek">0000  0000  0000</string>
+
     <string name="informasi_saldo">Informasi Saldo</string>
     <string name="profile">Profile</string>
     <string name="tambah_saldo">Tambah Saldo</string>
     <string name="riwayat_transaksi">Riwayat Transaksi</string>
+
     <string name="title_topup">Cara isi saldo MCF :</string>
     <string name="cara_topup1">Login ke internet banking dari bank yang akan digunakan</string>
     <string name="cara_topup2"><![CDATA[Pilih TOP UP > E-WALLET > MONEY COME FIRST (MCF).]]></string>
     <string name="cara_topup3">Masukkan nomor HP anda yang terdaftar pada aplikasi MCF.</string>
     <string name="cara_topup4">Masukkan jumlah saldo yang ingin anda isi.</string>
     <string name="cara_topup5">Ikuti petunjuk selanjutnya untuk menyelesaikan proses transaksi.</string>
+
     <string name="login_title">masuk ke akunmu</string>
     <string name="email">Email</string>
     <string name="input_email">Masukkan email-mu</string>
@@ -23,4 +27,13 @@
     <string name="forget_password">Lupa kata sandi</string>
     <string name="login">Masuk</string>
     <string name="signup_link">Belum punya akun? Daftar Sekarang!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="scan_qris">Scan Qris</string>
+    <string name="logout">Keluar</string>
+
+
 </resources>

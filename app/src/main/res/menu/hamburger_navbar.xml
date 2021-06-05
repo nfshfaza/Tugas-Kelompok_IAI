@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/imgprofileblack"
+            android:title="@string/dashboard" />
+
+        <item
+            android:id="@+id/riwayatTransaksi"
+            android:icon="@drawable/imgtransaksi"
+            android:title="@string/riwayat_transaksi" />
+        <item
+            android:id="@+id/tambahSaldo"
+            android:icon="@drawable/imgtambahsaldo"
+            android:title="@string/tambah_saldo" />
+
+        <item
+            android:id="@+id/scanQris"
+            android:icon="@drawable/imgqris"
+            android:title="@string/scan_qris" />
+    </group>
 
     <item
-        android:id="@+id/infoSaldoFragment"
-        android:title="@string/informasi_saldo" />
-
-    <item
-        android:id="@+id/riwayatTransaksi"
-        android:title="@string/riwayat_transaksi" />
-    <item
-        android:id="@+id/tambahSaldo"
-        android:title="@string/tambah_saldo" />
-
-    <!--fragment profile belum tersedia :D-->
-    <item
-        android:id="@+id/profileFragment"
-        android:title="@string/profile" />
-
+        android:id="@+id/logout"
+        android:title="@string/logout"/>
 </menu>
