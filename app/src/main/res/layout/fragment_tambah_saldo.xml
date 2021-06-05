@@ -15,20 +15,195 @@
         android:layout_marginStart="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Bank Asal"
-        android:textSize="24dp"
+        android:text="@string/title_topup"
+        android:textSize="24sp"
         android:textColor="@color/dark_blue"
         android:fontFamily="@font/barlow_bold"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_TambahSaldo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <!--nomor 1-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintTop_toBottomOf="@id/title_TambahSaldo"
-        tools:listitem="@layout/tambahsaldo" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:src="@color/pale_blue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:fontFamily="@font/barlow_semibold"
+        android:textColor="@color/light_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/civ_1"
+        app:layout_constraintStart_toStartOf="@id/civ_1"
+        app:layout_constraintEnd_toEndOf="@id/civ_1"
+        app:layout_constraintBottom_toBottomOf="@id/civ_1"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_CaraTopup1"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cara_topup1"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/civ_1"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/civ_1"
+        android:lineHeight="22dp"/>
+
+    <!--nomor 2-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_CaraTopup1"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:src="@color/pale_blue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:fontFamily="@font/barlow_semibold"
+        android:textColor="@color/light_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/civ_2"
+        app:layout_constraintStart_toStartOf="@id/civ_2"
+        app:layout_constraintEnd_toEndOf="@id/civ_2"
+        app:layout_constraintBottom_toBottomOf="@id/civ_2"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_CaraTopup2"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cara_topup2"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/civ_2"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/civ_2"
+        android:lineHeight="22dp"/>
+
+    <!--nomor 3-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_CaraTopup2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:src="@color/pale_blue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:fontFamily="@font/barlow_semibold"
+        android:textColor="@color/light_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/civ_3"
+        app:layout_constraintStart_toStartOf="@id/civ_3"
+        app:layout_constraintEnd_toEndOf="@id/civ_3"
+        app:layout_constraintBottom_toBottomOf="@id/civ_3"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_CaraTopup3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cara_topup3"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/civ_3"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/civ_3"
+        android:lineHeight="22dp"/>
+
+    <!--nomor 4-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_CaraTopup3"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:src="@color/pale_blue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:fontFamily="@font/barlow_semibold"
+        android:textColor="@color/light_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/civ_4"
+        app:layout_constraintStart_toStartOf="@id/civ_4"
+        app:layout_constraintEnd_toEndOf="@id/civ_4"
+        app:layout_constraintBottom_toBottomOf="@id/civ_4"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_CaraTopup4"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cara_topup4"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/civ_4"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/civ_4"
+        android:lineHeight="22dp"/>
+
+    <!--nomor 5-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_CaraTopup4"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:src="@color/pale_blue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:fontFamily="@font/barlow_semibold"
+        android:textColor="@color/light_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/civ_5"
+        app:layout_constraintStart_toStartOf="@id/civ_5"
+        app:layout_constraintEnd_toEndOf="@id/civ_5"
+        app:layout_constraintBottom_toBottomOf="@id/civ_5"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_CaraTopup5"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cara_topup5"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/civ_5"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/civ_5"
+        android:lineHeight="22dp"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_TambahSaldo"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title_TambahSaldo"-->
+<!--        tools:listitem="@layout/tambahsaldo" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

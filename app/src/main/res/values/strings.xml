@@ -9,4 +9,10 @@
     <string name="profile">Profile</string>
     <string name="tambah_saldo">Tambah Saldo</string>
     <string name="riwayat_transaksi">Riwayat Transaksi</string>
+    <string name="title_topup">Cara isi saldo MCF :</string>
+    <string name="cara_topup1">Login ke internet banking dari bank yang akan digunakan</string>
+    <string name="cara_topup2"><![CDATA[Pilih TOP UP > E-WALLET > MONEY COME FIRST (MCF).]]></string>
+    <string name="cara_topup3">Masukkan nomor HP anda yang terdaftar pada aplikasi MCF.</string>
+    <string name="cara_topup4">Masukkan jumlah saldo yang ingin anda isi.</string>
+    <string name="cara_topup5">Ikuti petunjuk selanjutnya untuk menyelesaikan proses transaksi.</string>
 </resources>

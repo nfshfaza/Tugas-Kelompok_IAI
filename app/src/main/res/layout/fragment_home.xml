@@ -161,7 +161,7 @@
 
     <!--info saldo button-->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_InfoSaldo"
+        android:id="@+id/btn_RiwayatTransaksi"
         app:layout_constraintTop_toBottomOf="@id/cv_UserCard"
         android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +171,7 @@
         app:cornerRadius="20dp"
         android:backgroundTint="@color/dark_blue"
         app:iconTint="@color/pure_white"
-        app:icon="@drawable/imgsaldo"
+        app:icon="@drawable/imgtransaksi"
         android:insetLeft="0dp"
         android:insetBottom="0dp"
         android:insetRight="0dp"
@@ -179,14 +179,14 @@
         app:iconGravity="textTop"
         app:iconPadding="0dp"/>
     <TextView
-        android:id="@+id/tv_InfoSaldo"
-        app:layout_constraintTop_toBottomOf="@id/btn_InfoSaldo"
+        android:id="@+id/tv_RiwayatTransaksi"
+        app:layout_constraintTop_toBottomOf="@id/btn_RiwayatTransaksi"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@id/btn_InfoSaldo"
-        app:layout_constraintStart_toStartOf="@id/btn_InfoSaldo"
+        app:layout_constraintEnd_toEndOf="@id/btn_RiwayatTransaksi"
+        app:layout_constraintStart_toStartOf="@id/btn_RiwayatTransaksi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Informasi\nSaldo"
+        android:text="Riwayat\nTransaksi"
         android:textSize="16sp"
         android:gravity="center_horizontal"
         android:textColor="@color/dark_blue"
@@ -227,7 +227,7 @@
 
     <!--riwayat transaksi button-->
     <Button
-        android:id="@+id/btn_RiwayatTransaksi"
+        android:id="@+id/btn_ScanQris"
         app:layout_constraintTop_toBottomOf="@id/cv_UserCard"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -237,7 +237,7 @@
         app:cornerRadius="20dp"
         android:backgroundTint="@color/dark_blue"
         app:iconTint="@color/pure_white"
-        app:icon="@drawable/imgtransaksi"
+        app:icon="@drawable/imgqris"
         android:insetLeft="0dp"
         android:insetBottom="0dp"
         android:insetRight="0dp"
@@ -245,14 +245,14 @@
         app:iconGravity="textStart"
         app:iconPadding="0dp"/>
     <TextView
-        android:id="@+id/tv_RiwayatTransaksi"
-        app:layout_constraintTop_toBottomOf="@id/btn_RiwayatTransaksi"
+        android:id="@+id/tv_ScanQris"
+        app:layout_constraintTop_toBottomOf="@id/btn_ScanQris"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@id/btn_RiwayatTransaksi"
-        app:layout_constraintStart_toStartOf="@id/btn_RiwayatTransaksi"
+        app:layout_constraintEnd_toEndOf="@id/btn_ScanQris"
+        app:layout_constraintStart_toStartOf="@id/btn_ScanQris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Riwayat\nTransaksi"
+        android:text="Scan\nQris"
         android:textSize="16sp"
         android:gravity="center_horizontal"
         android:textColor="@color/dark_blue"
