@@ -34,6 +34,7 @@
     <string name="dashboard">Dashboard</string>
     <string name="scan_qris">Scan Qris</string>
     <string name="logout">Keluar</string>
+    <string name="mcf">MCF</string>
 
 
 </resources>
