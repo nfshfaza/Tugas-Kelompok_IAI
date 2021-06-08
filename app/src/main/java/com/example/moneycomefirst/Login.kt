@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_login.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class Login : Fragment() {
@@ -24,10 +28,24 @@ class Login : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.hide()
 
         btn_login.setOnClickListener{
-            var email = tf_email.text.toString()
-            var password = tf_password.text.toString()
+            val email = tf_email.text.toString()
+            val password = tf_password.text.toString()
+            Constants.instance.createLogin(email, password).enqueue(object : Callback<CreateLoginResponse>{
+                override fun onResponse(
+                    call: Call<CreateLoginResponse>,
+                    response: Response<CreateLoginResponse>
+                ) {
+                    var token = response.body()
+                    val action = LoginDirections.actionlogin()
+                    Navigation.findNavController(view).navigate(action)
+                }
 
-            Log.i("login", email+" "+password)
+                override fun onFailure(call: Call<CreateLoginResponse>, t: Throwable) {
+
+                }
+
+            })
+
         }
     }
 
