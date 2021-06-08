@@ -26,6 +26,7 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.hide()
+        var state = false
 
         btn_login.setOnClickListener{
             val email = tf_email.text.toString()
@@ -36,8 +37,7 @@ class Login : Fragment() {
                     response: Response<CreateLoginResponse>
                 ) {
                     var token = response.body()
-                    val action = LoginDirections.actionlogin()
-                    Navigation.findNavController(view).navigate(action)
+                    state = true
                 }
 
                 override fun onFailure(call: Call<CreateLoginResponse>, t: Throwable) {
@@ -46,6 +46,10 @@ class Login : Fragment() {
 
             })
 
+            if (state == true){
+                val action = LoginDirections.actionlogin()
+                Navigation.findNavController(view).navigate(action)
+            }
         }
     }
 

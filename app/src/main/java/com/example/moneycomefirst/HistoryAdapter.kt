@@ -7,6 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.riwayattransaksicard.view.*
 
 class HistoryAdapter(private val list: ArrayList<HistoryResponse>): RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
+    fun updateHistoryData(newData: ArrayList<HistoryResponse>) {
+        list.clear()
+        newData?.let { list.addAll(it) }
+        notifyDataSetChanged()
+    }
+
     inner class HistoryViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
         fun bind(historyResponse: HistoryResponse){
             with(itemView){
@@ -21,6 +27,9 @@ class HistoryAdapter(private val list: ArrayList<HistoryResponse>): RecyclerView
 
                 val status_transaksi = historyResponse.transactions_type
                 tv_StatusTransaksi.text = status_transaksi
+
+                val nominal_transaksi = historyResponse.value
+                tv_NominalTransaksi.text = nominal_transaksi
             }
         }
     }

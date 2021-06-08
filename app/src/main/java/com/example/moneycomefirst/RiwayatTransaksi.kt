@@ -16,6 +16,7 @@ import retrofit2.Retrofit
 
 class RiwayatTransaksi : Fragment() {
 
+    private val historyAdapter = HistoryAdapter(arrayListOf())
     private var list = ArrayList<HistoryResponse>()
 
     override fun onCreateView(
@@ -28,18 +29,18 @@ class RiwayatTransaksi : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Constants.instance.getHistory().enqueue(object : Callback<ArrayList<HistoryResponse>>{
+        rv_RiwayatTransaksi.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = historyAdapter
+        }
+        Constants.instance.getHistory(Constants.constant_body).enqueue(object : Callback<ArrayList<HistoryResponse>>{
 
             override fun onResponse(
                 call: Call<ArrayList<HistoryResponse>>,
                 response: Response<ArrayList<HistoryResponse>>
             ) {
                 response.body()?.let { list.addAll(it) }
-                val historyAdapter = HistoryAdapter(list)
-                rv_RiwayatTransaksi.apply {
-                    layoutManager = LinearLayoutManager(context)
-                    adapter = historyAdapter
-                }
+                historyAdapter.updateHistoryData(list)
             }
 
             override fun onFailure(call: Call<ArrayList<HistoryResponse>>, t: Throwable) {

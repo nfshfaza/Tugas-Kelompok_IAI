@@ -21,6 +21,9 @@ class Home : Fragment() {
 
     private lateinit var dataBinding: FragmentHomeBinding
 
+    var new_response = HistoryResponse("", "", "", "", WalletResponse("", "", ""), "")
+    var response2 = ArrayList<HistoryResponse>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,13 +36,17 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Constants.instance.getHistory().enqueue(object : Callback<ArrayList<HistoryResponse>> {
+        Constants.instance.getHistory(Constants.constant_body).enqueue(object : Callback<ArrayList<HistoryResponse>> {
 
             override fun onResponse(
                 call: Call<ArrayList<HistoryResponse>>,
                 response: Response<ArrayList<HistoryResponse>>
             ) {
-                dataBinding.history = response.body()!![0]
+                //Log.i("response", response.body().toString())
+                response.body()?.get(1)?.let { new_response }
+                response.body()?.let { response2.addAll(it) }
+                Log.i("response", response2[0].toString())
+                dataBinding.history = response2[0]
             }
 
             override fun onFailure(call: Call<ArrayList<HistoryResponse>>, t: Throwable) {
@@ -47,6 +54,8 @@ class Home : Fragment() {
             }
 
         })
+
+        //dataBinding.history = new_response
 
         btn_RiwayatTransaksi.setOnClickListener {
             val toTransaction = HomeDirections.nextactiontransaksi()

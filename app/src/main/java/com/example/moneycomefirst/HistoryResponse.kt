@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class HistoryResponse(
     @SerializedName("id")
-    val transactions_id: Int,
+    val transactions_id: String,
     @SerializedName("jenis")
     val transactions_type: String,
     val timestamp: String,
