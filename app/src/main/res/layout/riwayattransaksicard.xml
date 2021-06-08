@@ -30,7 +30,8 @@
                 android:layout_height="wrap_content"
                 android:text="000000000"
                 android:textSize="12sp"
-                android:textColor="@color/gray"/>
+                android:textColor="@color/gray"
+                android:fontFamily="@font/barlow_medium"/>
 
             <!--transaction date-->
             <TextView
@@ -43,7 +44,8 @@
                 android:layout_height="wrap_content"
                 android:text="21-05-2021"
                 android:textSize="12sp"
-                android:textColor="@color/gray"/>
+                android:textColor="@color/gray"
+                android:fontFamily="@font/barlow_medium"/>
 
             <!--nama-->
             <TextView
@@ -56,7 +58,8 @@
                 android:layout_marginStart="16dp"
                 android:text="Teguh Hati Untuk Bangsa"
                 android:textSize="16sp"
-                android:textColor="@color/dark_blue"/>
+                android:textColor="@color/dark_blue"
+                android:fontFamily="@font/barlow_semibold"/>
 
             <!--bank-->
             <TextView
@@ -69,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="@color/gray"
-                android:text="@string/mcf"/>
+                android:text="@string/mcf"
+                android:fontFamily="@font/barlow_medium"/>
 
             <!--status in/out-come-->
             <TextView
@@ -82,7 +86,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="@color/green"
-                android:text="Income"/>
+                android:text="Income"
+                android:fontFamily="@font/barlow_medium"/>
 
             <!--nominal-->
             <TextView
@@ -95,7 +100,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="@color/dark_blue"
-                android:text="Rp 200.500"/>
+                android:text="Rp 200.500"
+                android:fontFamily="@font/barlow_medium"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
