@@ -41,14 +41,14 @@
             android:layout_marginTop="12dp"/>
 
         <TextView
-            android:id="@+id/tv_navbarNoRekUser"
+            android:id="@+id/tv_navbarEmailUser"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_navbarUserName"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16sp"
-            android:text="**** **** 0000"
+            android:text="email@gmail.com"
             android:fontFamily="@font/barlow_semibold"
             android:textSize="16sp"
             android:textColor="@color/light_blue"/>
