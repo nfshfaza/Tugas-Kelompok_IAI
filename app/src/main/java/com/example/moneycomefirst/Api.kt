@@ -4,7 +4,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface Api {
-    @Headers("Authorization: Token 5e48dec1672c0eeee4ffdf5020c0ca2fb719b08e")
+    @Headers("Authorization: Token 572b7fa2c5f29b42c89f51ceb8d54128a2e0e436")
     @GET("transactions/history/{wallet_id}")
     fun getHistory(@Path("wallet_id") wallet_id: String): Call<ArrayList<HistoryResponse>>
 

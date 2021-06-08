@@ -14,9 +14,9 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:spanCount="1"
         tools:listitem="@layout/riwayattransaksicard"/>
 
 

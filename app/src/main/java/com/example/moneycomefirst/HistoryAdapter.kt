@@ -3,6 +3,7 @@ package com.example.moneycomefirst
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.riwayattransaksicard.view.*
 
@@ -26,7 +27,12 @@ class HistoryAdapter(private val list: ArrayList<HistoryResponse>): RecyclerView
                 tv_transaksi_userName.text = transaksi_username
 
                 val status_transaksi = historyResponse.transactions_type
-                tv_StatusTransaksi.text = status_transaksi
+                if (status_transaksi == "W"){
+                    tv_StatusTransaksi.text = "Outcome"
+                    tv_StatusTransaksi.setTextColor(ContextCompat.getColor(context, R.color.red))
+                    } else {
+                        tv_StatusTransaksi.text = "Income"
+                }
 
                 val nominal_transaksi = historyResponse.value
                 tv_NominalTransaksi.text = nominal_transaksi
