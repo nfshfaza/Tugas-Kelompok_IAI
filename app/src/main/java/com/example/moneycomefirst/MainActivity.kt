@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var profileCircleImageView: CircleImageView
 //    private var profileImageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gemtvasia.com%2F7-things-you-didnt-know-about-mackenyu-arata&psig=AOvVaw2aNhJXJwDLwzb8KZR2q7qp&ust=1622963131554000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjEgoH3__ACFQAAAAAdAAAAABAP"
-//    private lateinit var btnRiwayatTransaksi: Button
-//    private lateinit var btnTambahSaldo: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,13 +46,6 @@ class MainActivity : AppCompatActivity() {
 
         //supaya NavigationDrawer menampilkan Fragment yang sesuai ketika menu dipilih.
         navView.setupWithNavController(navController)
-
-//        //untuk mengaktifkan button di dashboard
-//        btnRiwayatTransaksi = findViewById(R.id.btn_RiwayatTransaksi)
-//        btnTambahSaldo = findViewById(R.id.btn_TambahSaldo)
-//
-//        btnRiwayatTransaksi.setOnClickListener(this)
-//        btnTambahSaldo.setOnClickListener(this)
     }
 
     //cara mengaktifkan tombol back

@@ -38,6 +38,11 @@ class Home : Fragment() {
             val toTambahSaldo = HomeDirections.nextactionsaldo()
             Navigation.findNavController(view).navigate(toTambahSaldo)
         }
+
+        btn_ScanQris.setOnClickListener{
+            val toScanQr = HomeDirections.nextactionscan()
+            Navigation.findNavController(view).navigate(toScanQr)
+        }
     }
 
 }

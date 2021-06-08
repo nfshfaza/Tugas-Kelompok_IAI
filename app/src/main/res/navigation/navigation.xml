@@ -17,7 +17,7 @@
             android:id="@+id/nextactionsaldo"
             app:destination="@id/tambahSaldo" />
         <action
-            android:id="@+id/action_home_to_login"
+            android:id="@+id/actionlogout"
             app:destination="@id/login" />
         <action
             android:id="@+id/nextactionscan"
@@ -38,7 +38,7 @@
         android:name="com.example.moneycomefirst.Login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_home"
+            android:id="@+id/actionlogin"
             app:destination="@id/home" />
     </fragment>
     <fragment
