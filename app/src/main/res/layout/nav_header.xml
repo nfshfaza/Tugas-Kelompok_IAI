@@ -41,7 +41,7 @@
             android:layout_marginTop="12dp"/>
 
         <TextView
-            android:id="@+id/tv_navbarEmailUser"
+            android:id="@+id/tv_navbaridWallet"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_navbarUserName"

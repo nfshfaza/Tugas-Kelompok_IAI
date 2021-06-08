@@ -1,33 +1,52 @@
 package com.example.moneycomefirst
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.moneycomefirst.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_riwayat_transaksi.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class Home : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+    private lateinit var dataBinding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        dataBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        return dataBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Constants.instance.getHistory().enqueue(object : Callback<ArrayList<HistoryResponse>> {
+
+            override fun onResponse(
+                call: Call<ArrayList<HistoryResponse>>,
+                response: Response<ArrayList<HistoryResponse>>
+            ) {
+                dataBinding.history = response.body()!![0]
+            }
+
+            override fun onFailure(call: Call<ArrayList<HistoryResponse>>, t: Throwable) {
+                Log.e("Error", t.localizedMessage)
+            }
+
+        })
 
         btn_RiwayatTransaksi.setOnClickListener {
             val toTransaction = HomeDirections.nextactiontransaksi()
